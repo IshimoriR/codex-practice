@@ -9,6 +9,11 @@ def complete_task(index):
     tasks[index]["completed"] = True
 
 
+def delete_task(index):
+    if type(index) is int and 0 <= index < len(tasks):
+        del tasks[index]
+
+
 def show_tasks():
     for task in tasks:
         status = "[x]" if task["completed"] else "[ ]"
