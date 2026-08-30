@@ -10,7 +10,7 @@ def complete_task(index):
 
 
 def delete_task(index):
-    if 0 <= index < len(tasks):
+    if type(index) is int and 0 <= index < len(tasks):
         del tasks[index]
 
 
